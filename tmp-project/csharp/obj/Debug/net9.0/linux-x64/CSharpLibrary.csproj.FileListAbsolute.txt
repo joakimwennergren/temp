@@ -1,0 +1,16 @@
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/bin/Debug/net9.0/linux-x64/CSharpLibrary.deps.json
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/bin/Debug/net9.0/linux-x64/CSharpLibrary.dll
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/bin/Debug/net9.0/linux-x64/CSharpLibrary.pdb
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/bin/Debug/net9.0/linux-x64/CsharpBindings.dll
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/bin/Debug/net9.0/linux-x64/CsharpBindings.pdb
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/obj/Debug/net9.0/linux-x64/CSharpLibrary.csproj.AssemblyReference.cache
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/obj/Debug/net9.0/linux-x64/CSharpLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/obj/Debug/net9.0/linux-x64/CSharpLibrary.AssemblyInfoInputs.cache
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/obj/Debug/net9.0/linux-x64/CSharpLibrary.AssemblyInfo.cs
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/obj/Debug/net9.0/linux-x64/CSharpLibrary.csproj.CoreCompileInputs.cache
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/obj/Debug/net9.0/linux-x64/CSharpLibrary.sourcelink.json
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/obj/Debug/net9.0/linux-x64/CSharpLi.D9646148.Up2Date
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/obj/Debug/net9.0/linux-x64/CSharpLibrary.dll
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/obj/Debug/net9.0/linux-x64/refint/CSharpLibrary.dll
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/obj/Debug/net9.0/linux-x64/CSharpLibrary.pdb
+/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/obj/Debug/net9.0/linux-x64/ref/CSharpLibrary.dll

@@ -1,0 +1,2 @@
+/Users/joakimwennergren/Projects/Entropy-Application/tmp-project/csharp/bin/Debug/net9.0/osx-arm64/publish/CSharpLibrary.dylib
+/Users/joakimwennergren/Projects/Entropy-Application/tmp-project/csharp/bin/Debug/net9.0/osx-arm64/publish/CsharpBindings.pdb

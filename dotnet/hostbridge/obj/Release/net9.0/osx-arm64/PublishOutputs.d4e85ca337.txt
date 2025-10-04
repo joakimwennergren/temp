@@ -1,0 +1,5 @@
+/Users/joakimwennergren/Projects/Entropy-Engine/hostbridge/bin/Release/net9.0/osx-arm64/publish/ManagedHostBridge.dll
+/Users/joakimwennergren/Projects/Entropy-Engine/hostbridge/bin/Release/net9.0/osx-arm64/publish/ManagedHostBridge.deps.json
+/Users/joakimwennergren/Projects/Entropy-Engine/hostbridge/bin/Release/net9.0/osx-arm64/publish/ManagedHostBridge.pdb
+/Users/joakimwennergren/Projects/Entropy-Engine/hostbridge/bin/Release/net9.0/osx-arm64/publish/SharedInterfaces.dll
+/Users/joakimwennergren/Projects/Entropy-Engine/hostbridge/bin/Release/net9.0/osx-arm64/publish/SharedInterfaces.pdb

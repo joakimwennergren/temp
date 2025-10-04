@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <PublishAot>true</PublishAot>
+        <PublishAotUsingRuntimePack>true</PublishAotUsingRuntimePack>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="/Users/joakimwennergren/Projects/Entropy-Engine/bindings/csharp/CsharpBindings.csproj" />
+    </ItemGroup>
+</Project>

@@ -1,0 +1,2 @@
+/Users/joakimwennergren/Projects/Svampjakt/csharp/bin/Debug/net9.0/osx-arm64/publish/CSharpLibrary.dylib
+/Users/joakimwennergren/Projects/Svampjakt/csharp/bin/Debug/net9.0/osx-arm64/publish/CsharpBindings.pdb

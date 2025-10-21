@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/vma-subbuild/CMakeFiles/vma-populate"
+		},
+		{
+			"file" : "/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/vma-subbuild/CMakeFiles/vma-populate.rule"
+		},
+		{
+			"file" : "/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/vma-subbuild/CMakeFiles/CMakeFiles/vma-populate-complete.rule"
+		},
+		{
+			"file" : "/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/vma-subbuild/vma-populate-prefix/src/vma-populate-stamp/CMakeFiles/vma-populate-build.rule"
+		},
+		{
+			"file" : "/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/vma-subbuild/vma-populate-prefix/src/vma-populate-stamp/CMakeFiles/vma-populate-configure.rule"
+		},
+		{
+			"file" : "/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/vma-subbuild/vma-populate-prefix/src/vma-populate-stamp/CMakeFiles/vma-populate-download.rule"
+		},
+		{
+			"file" : "/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/vma-subbuild/vma-populate-prefix/src/vma-populate-stamp/CMakeFiles/vma-populate-install.rule"
+		},
+		{
+			"file" : "/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/vma-subbuild/vma-populate-prefix/src/vma-populate-stamp/CMakeFiles/vma-populate-mkdir.rule"
+		},
+		{
+			"file" : "/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/vma-subbuild/vma-populate-prefix/src/vma-populate-stamp/CMakeFiles/vma-populate-patch.rule"
+		},
+		{
+			"file" : "/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/vma-subbuild/vma-populate-prefix/src/vma-populate-stamp/CMakeFiles/vma-populate-test.rule"
+		},
+		{
+			"file" : "/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/vma-subbuild/vma-populate-prefix/src/vma-populate-stamp/CMakeFiles/vma-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vma-populate"
+		],
+		"name" : "vma-populate"
+	}
+}

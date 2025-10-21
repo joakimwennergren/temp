@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		4FB27D6D46853B95406C804D /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 50F78452621A4D5DBC57264E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				9F84553F4F1C603E0D357772 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				237209836B9A47B38A7373F5 /* PBXTargetDependency */,
+				54F597973853425598430207 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		79A9D5F625263C574A8C1F34 /* quill-populate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9F89A48C7542404288448159 /* Build configuration list for PBXAggregateTarget "quill-populate" */;
+			buildPhases = (
+				C2C2EBA4EE10E3CEB7B9A695 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-mkdir */,
+				39D4F87EFAD9D61328E06080 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-download */,
+				183B3612609F1EB89BF037E9 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-update */,
+				B12F7568035D667A5A3C4A22 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-patch */,
+				2D60BF762B90C93D0046B105 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-configure */,
+				4C53F01912ABBFF3F76F708F /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-build */,
+				E704830711D8DCAE9355EB35 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-install */,
+				9E692E096982E91229BC74E1 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-test */,
+				BF758F0C6798F7143F966AA4 /* Generate CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-complete */,
+				AD8038A1226B43466E5CA54B /* Generate CMakeFiles/quill-populate */,
+			);
+			dependencies = (
+				EDA9E5C53A7F4667B3E9A95A /* PBXTargetDependency */,
+			);
+			name = "quill-populate";
+			productName = "quill-populate";
+		};
+		C56E26E26CE7A4A99551A350 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5FF7084E8DD149398368348E /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				4D2AAEDB890099445D3796C7 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildStyle section */
+		6621F4CC2D424CB1A75C31E7 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		72A8ED44358044A5BB54DCD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99A5C6AFDE3D49D189E079CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C56E26E26CE7A4A99551A350;
+			remoteInfo = ZERO_CHECK;
+		};
+		BA6BB69EB6004BC39EFA53A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99A5C6AFDE3D49D189E079CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79A9D5F625263C574A8C1F34;
+			remoteInfo = "quill-populate";
+		};
+		E842C430AD3D4DF0A145B4DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99A5C6AFDE3D49D189E079CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C56E26E26CE7A4A99551A350;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74D14D70E73A41DBA5374AF4 /* /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B8B43745D7FC486F9959B664 /* /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		05F9F36A1C2648DDBEDC81D9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0872177F124C4CA1BA44E709 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				D99D047D1DB042BB9E0F195F /* CMake Rules */,
+				74D14D70E73A41DBA5374AF4 /* /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		2A2508224B504A28A2BD3C9C = {
+			isa = PBXGroup;
+			children = (
+				CE9CF81F8380432485DAE6B1 /* ExternalProjectTargets */,
+				0872177F124C4CA1BA44E709 /* ALL_BUILD */,
+				DCC290E2A5184C179639C220 /* Products */,
+				F291441D11574297B5C84117 /* Frameworks */,
+				05F9F36A1C2648DDBEDC81D9 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		2EAE4B90239447AD9E09E66A /* quill-populate */ = {
+			isa = PBXGroup;
+			children = (
+				BB29A9075DC64F1EAF95A161 /* quill-populate */,
+			);
+			name = "quill-populate";
+			sourceTree = "<group>";
+		};
+		BB29A9075DC64F1EAF95A161 /* quill-populate */ = {
+			isa = PBXGroup;
+			children = (
+				F45D623AE1D944C1BA2275D6 /* CMake Rules */,
+				B8B43745D7FC486F9959B664 /* /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/CMakeLists.txt */,
+			);
+			name = "quill-populate";
+			sourceTree = "<group>";
+		};
+		CE9CF81F8380432485DAE6B1 /* ExternalProjectTargets */ = {
+			isa = PBXGroup;
+			children = (
+				2EAE4B90239447AD9E09E66A /* quill-populate */,
+			);
+			name = ExternalProjectTargets;
+			sourceTree = "<group>";
+		};
+		D99D047D1DB042BB9E0F195F /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		DCC290E2A5184C179639C220 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F291441D11574297B5C84117 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F45D623AE1D944C1BA2275D6 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		99A5C6AFDE3D49D189E079CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
+			};
+			buildConfigurationList = CCFDC5C42A4B4D79B752EB0D /* Build configuration list for PBXProject "quill-populate" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				6621F4CC2D424CB1A75C31E7 /* Debug */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 2A2508224B504A28A2BD3C9C;
+			projectDirPath = .;
+			projectRoot = "";
+			targets = (
+				4FB27D6D46853B95406C804D /* ALL_BUILD */,
+				79A9D5F625263C574A8C1F34 /* quill-populate */,
+				C56E26E26CE7A4A99551A350 /* ZERO_CHECK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		183B3612609F1EB89BF037E9 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-update */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-download","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/quill-populate-update-info.txt","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/tmp/quill-populate-gitupdate.cmake"			);
+			name = "Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-update";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-update"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-src
+  /opt/homebrew/bin/cmake -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/tmp/quill-populate-gitupdate.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		2D60BF762B90C93D0046B105 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-configure */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-patch","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/tmp/quill-populate-cfgcmd.txt"			);
+			name = "Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-configure";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-configure"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-build
+  /opt/homebrew/bin/cmake -E echo_append
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/quill-populate-configure
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		39D4F87EFAD9D61328E06080 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-download */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-mkdir","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/quill-populate-gitinfo.txt"			);
+			name = "Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-download";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-download"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps
+  /opt/homebrew/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/tmp/quill-populate-gitclone.cmake
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/quill-populate-download
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		4C53F01912ABBFF3F76F708F /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-configure"			);
+			name = "Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-build";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-build"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-build
+  /opt/homebrew/bin/cmake -E echo_append
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/quill-populate-build
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		4D2AAEDB890099445D3796C7 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/CMakeFiles/ZERO_CHECK"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild
+  make -f /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		912047690037CB86522ABEF2 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		9E692E096982E91229BC74E1 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-test */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-install"			);
+			name = "Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-test";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-test"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-build
+  /opt/homebrew/bin/cmake -E echo_append
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/quill-populate-test
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9F84553F4F1C603E0D357772 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/CMakeFiles/ALL_BUILD"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		AD8038A1226B43466E5CA54B /* Generate CMakeFiles/quill-populate */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-complete"			);
+			name = "Generate CMakeFiles/quill-populate";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/CMakeFiles/quill-populate"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		B12F7568035D667A5A3C4A22 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-patch */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-update","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/quill-populate-patch-info.txt"			);
+			name = "Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-patch";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-patch"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild
+  /opt/homebrew/bin/cmake -E echo_append
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/quill-populate-patch
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		BF758F0C6798F7143F966AA4 /* Generate CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-complete */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-build","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-configure","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-download","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-install","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-mkdir","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-patch","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-test","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-update"			);
+			name = "Generate CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-complete";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-complete"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild
+  /opt/homebrew/bin/cmake -E make_directory /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/CMakeFiles/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/CMakeFiles/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/quill-populate-complete
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/quill-populate-done
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		C2C2EBA4EE10E3CEB7B9A695 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-mkdir */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-mkdir";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-mkdir"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild
+  /opt/homebrew/bin/cmake -Dcfgdir=/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/tmp/quill-populate-mkdirs.cmake
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/quill-populate-mkdir
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		E704830711D8DCAE9355EB35 /* Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-install */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-build"			);
+			name = "Generate quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-install";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/quill-populate-install"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-build
+  /opt/homebrew/bin/cmake -E echo_append
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/quill-populate-prefix/src/quill-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/quill-populate-install
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		237209836B9A47B38A7373F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79A9D5F625263C574A8C1F34 /* quill-populate */;
+			targetProxy = BA6BB69EB6004BC39EFA53A0 /* PBXContainerItemProxy */;
+		};
+		54F597973853425598430207 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C56E26E26CE7A4A99551A350 /* ZERO_CHECK */;
+			targetProxy = E842C430AD3D4DF0A145B4DF /* PBXContainerItemProxy */;
+		};
+		EDA9E5C53A7F4667B3E9A95A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C56E26E26CE7A4A99551A350 /* ZERO_CHECK */;
+			targetProxy = 72A8ED44358044A5BB54DCD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AB5A848CC484FE2A5E2C0CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SYMROOT = "/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/quill-subbuild/build";
+			};
+			name = Debug;
+		};
+		4A474C66B67F43228C4F2383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		670919C4FC8E4A6DBAFCCD76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "quill-populate";
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		BA6131F6CE0343FDAFF364FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50F78452621A4D5DBC57264E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A474C66B67F43228C4F2383 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5FF7084E8DD149398368348E /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA6131F6CE0343FDAFF364FA /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9F89A48C7542404288448159 /* Build configuration list for PBXAggregateTarget "quill-populate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				670919C4FC8E4A6DBAFCCD76 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CCFDC5C42A4B4D79B752EB0D /* Build configuration list for PBXProject "quill-populate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AB5A848CC484FE2A5E2C0CF /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99A5C6AFDE3D49D189E079CB /* Project object */;
+}

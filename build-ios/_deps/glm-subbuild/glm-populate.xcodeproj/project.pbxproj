@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		35575BB33CB8AD727BF1209E /* glm-populate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 22D644C953614009AB5C9F6C /* Build configuration list for PBXAggregateTarget "glm-populate" */;
+			buildPhases = (
+				EF2DFDF01E77C0C4875069A7 /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-mkdir */,
+				5E493992496572BA684AC259 /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-download */,
+				046FAB5C34D862B39E46EAEC /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-update */,
+				793ECFABA7E490A6598CD2C8 /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-patch */,
+				B1A5239652726071BD27BFB2 /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-configure */,
+				E70B395606D7FAA88FE9C7AE /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-build */,
+				8E6A1F64456D6337DCA47FC5 /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-install */,
+				AB8C67B6265EDAB75E56D43F /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-test */,
+				1FF31229FA9D0CC38192168B /* Generate CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-complete */,
+				5BF08FB823A8D4B7652570A1 /* Generate CMakeFiles/glm-populate */,
+			);
+			dependencies = (
+				0164DA04911E4835BD8E3A30 /* PBXTargetDependency */,
+			);
+			name = "glm-populate";
+			productName = "glm-populate";
+		};
+		F5B0C3922952F8B5AC541C1B /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B0D5065DACED4BB4A09D1CED /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				E7E7A7AC4EF3021B4A4C7BE0 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		FB22F385900C356F361761A9 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 138870FD27634BCEBEA36A16 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				2D37AFDFDEED251EBC06A421 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				B1ED5AD3CC8B4D2C94333B0E /* PBXTargetDependency */,
+				1E31EC2D1D8C433494F6AD3F /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildStyle section */
+		9316AC2213F34BC4BC6CF20F /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		6CA2BF5415E345F3A9BAC0FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21F342FF324449ACBFF9B253 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5B0C3922952F8B5AC541C1B;
+			remoteInfo = ZERO_CHECK;
+		};
+		81117F86E0E14DA684C4EE09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21F342FF324449ACBFF9B253 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35575BB33CB8AD727BF1209E;
+			remoteInfo = "glm-populate";
+		};
+		A89B84D50EB24CC18661BE33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21F342FF324449ACBFF9B253 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5B0C3922952F8B5AC541C1B;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D25D8D7A0FF44969BE715B6 /* /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A42201C8936448A487FA2B95 /* /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0902D8418FB84C4982158AFE /* ExternalProjectTargets */ = {
+			isa = PBXGroup;
+			children = (
+				8FF7571AB43D48FD80DF6CD9 /* glm-populate */,
+			);
+			name = ExternalProjectTargets;
+			sourceTree = "<group>";
+		};
+		3F06D70B66FD4B018CEB367C /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				EC281C087CC846D1B34D832B /* CMake Rules */,
+				1D25D8D7A0FF44969BE715B6 /* /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		6B7CF866FE1C4FDB97932A27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FF7571AB43D48FD80DF6CD9 /* glm-populate */ = {
+			isa = PBXGroup;
+			children = (
+				DD56EAD315F041319148B00C /* glm-populate */,
+			);
+			name = "glm-populate";
+			sourceTree = "<group>";
+		};
+		A9D0DB4A52F14940B7BCD13F /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		D06F0999095E44069C995851 = {
+			isa = PBXGroup;
+			children = (
+				0902D8418FB84C4982158AFE /* ExternalProjectTargets */,
+				3F06D70B66FD4B018CEB367C /* ALL_BUILD */,
+				6B7CF866FE1C4FDB97932A27 /* Products */,
+				F362C166A8E8423D8CAC3ACB /* Frameworks */,
+				D8960F87C6464A3AB57732FF /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		D8960F87C6464A3AB57732FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DD56EAD315F041319148B00C /* glm-populate */ = {
+			isa = PBXGroup;
+			children = (
+				A9D0DB4A52F14940B7BCD13F /* CMake Rules */,
+				A42201C8936448A487FA2B95 /* /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/CMakeLists.txt */,
+			);
+			name = "glm-populate";
+			sourceTree = "<group>";
+		};
+		EC281C087CC846D1B34D832B /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		F362C166A8E8423D8CAC3ACB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		21F342FF324449ACBFF9B253 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
+			};
+			buildConfigurationList = 39BE474C15264A57A4EF53CA /* Build configuration list for PBXProject "glm-populate" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				9316AC2213F34BC4BC6CF20F /* Debug */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = D06F0999095E44069C995851;
+			projectDirPath = .;
+			projectRoot = "";
+			targets = (
+				FB22F385900C356F361761A9 /* ALL_BUILD */,
+				35575BB33CB8AD727BF1209E /* glm-populate */,
+				F5B0C3922952F8B5AC541C1B /* ZERO_CHECK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		046FAB5C34D862B39E46EAEC /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-update */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-download","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-update-info.txt","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/tmp/glm-populate-gitupdate.cmake"			);
+			name = "Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-update";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-update"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-src
+  /opt/homebrew/bin/cmake -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/tmp/glm-populate-gitupdate.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		1FF31229FA9D0CC38192168B /* Generate CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-complete */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-build","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-configure","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-download","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-install","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-mkdir","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-patch","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-test","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-update"			);
+			name = "Generate CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-complete";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-complete"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild
+  /opt/homebrew/bin/cmake -E make_directory /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/CMakeFiles/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/CMakeFiles/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/glm-populate-complete
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/glm-populate-done
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		2D37AFDFDEED251EBC06A421 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/CMakeFiles/ALL_BUILD"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		5BF08FB823A8D4B7652570A1 /* Generate CMakeFiles/glm-populate */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-complete"			);
+			name = "Generate CMakeFiles/glm-populate";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/CMakeFiles/glm-populate"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		5E493992496572BA684AC259 /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-download */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-mkdir","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-gitinfo.txt"			);
+			name = "Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-download";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-download"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps
+  /opt/homebrew/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/tmp/glm-populate-gitclone.cmake
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/glm-populate-download
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		793ECFABA7E490A6598CD2C8 /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-patch */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-update","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/glm-populate-patch-info.txt"			);
+			name = "Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-patch";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-patch"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild
+  /opt/homebrew/bin/cmake -E echo_append
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/glm-populate-patch
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		8E6A1F64456D6337DCA47FC5 /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-install */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-build"			);
+			name = "Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-install";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-install"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-build
+  /opt/homebrew/bin/cmake -E echo_append
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/glm-populate-install
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		AB8C67B6265EDAB75E56D43F /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-test */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-install"			);
+			name = "Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-test";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-test"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-build
+  /opt/homebrew/bin/cmake -E echo_append
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/glm-populate-test
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		B10B0713A3197E6C323A329D = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		B1A5239652726071BD27BFB2 /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-configure */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-patch","/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/tmp/glm-populate-cfgcmd.txt"			);
+			name = "Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-configure";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-configure"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-build
+  /opt/homebrew/bin/cmake -E echo_append
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/glm-populate-configure
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		E70B395606D7FAA88FE9C7AE /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-configure"			);
+			name = "Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-build";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-build"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-build
+  /opt/homebrew/bin/cmake -E echo_append
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/glm-populate-build
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		E7E7A7AC4EF3021B4A4C7BE0 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/CMakeFiles/ZERO_CHECK"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild
+  make -f /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		EF2DFDF01E77C0C4875069A7 /* Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-mkdir */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-mkdir";
+			outputPaths = (
+"/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/glm-populate-mkdir"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild
+  /opt/homebrew/bin/cmake -Dcfgdir=/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/tmp/glm-populate-mkdirs.cmake
+  /opt/homebrew/bin/cmake -E touch /Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/glm-populate-mkdir
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0164DA04911E4835BD8E3A30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5B0C3922952F8B5AC541C1B /* ZERO_CHECK */;
+			targetProxy = A89B84D50EB24CC18661BE33 /* PBXContainerItemProxy */;
+		};
+		1E31EC2D1D8C433494F6AD3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35575BB33CB8AD727BF1209E /* glm-populate */;
+			targetProxy = 81117F86E0E14DA684C4EE09 /* PBXContainerItemProxy */;
+		};
+		B1ED5AD3CC8B4D2C94333B0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5B0C3922952F8B5AC541C1B /* ZERO_CHECK */;
+			targetProxy = 6CA2BF5415E345F3A9BAC0FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0858FF9BCCF345B6A7CF8A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		5B969DCC1B3247A4963A1CC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SYMROOT = "/Users/joakimwennergren/Projects/Entropy-Application/build-ios/_deps/glm-subbuild/build";
+			};
+			name = Debug;
+		};
+		A9A236ECA2984768A8D2D19F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "glm-populate";
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		FA21AFD031D44E7693530DE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		138870FD27634BCEBEA36A16 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA21AFD031D44E7693530DE6 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		22D644C953614009AB5C9F6C /* Build configuration list for PBXAggregateTarget "glm-populate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9A236ECA2984768A8D2D19F /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		39BE474C15264A57A4EF53CA /* Build configuration list for PBXProject "glm-populate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B969DCC1B3247A4963A1CC1 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B0D5065DACED4BB4A09D1CED /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0858FF9BCCF345B6A7CF8A9B /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21F342FF324449ACBFF9B253 /* Project object */;
+}

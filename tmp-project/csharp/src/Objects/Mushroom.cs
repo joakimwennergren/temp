@@ -5,50 +5,103 @@ using Entropy.ECS.Components;
 namespace Svampjakt;
  
 public class Mushroom
-{
+{   
+    // Entity & components
     public Entity Entity { get; set; } 
-    public Texture Texture { get; set; } 
-    public Position Position { get; set; } = new Position(0.0f, 0.0f, 0.0f);
-    public Dimension Dimension { get; set; } = new Dimension(0.0f, 0.0f);
-    public Dimension Ratio { get; set; } = new Dimension(0.5f, 0.5f);
-    public bool ShouldGrow { get; set; } = false;
 
+    // Mushroom properties
+    private Dimension BaseDimension { get; set; } = new Dimension(5.0f, 5.0f);
+    public Position BasePosition {get; set;}
+
+    // Growth animation
     private float Time = 0.0f;
     private float BounceValue = 0.0f;
-    private float Offset = 0.0f;
-    private bool FirstGrow = true;
-    private int GrowStep = 0;
-    private Dimension BaseDimension = new Dimension(1.4f, 1.4f);
 
-    public void Create()
+    private bool hasBeenClicked = false;
+
+    public Mushroom(string path, Dimension ratio)
     {
-        Dimension = new Dimension(
-            BaseDimension.x * Ratio.x,
-            BaseDimension.y * Ratio.y
-        );
-
         Entity mushroom = new Entity();
-        mushroom.AddComponent(Position);
-        mushroom.AddComponent(Dimension);
-        mushroom.AddComponent(new Color(1.0f, 1.0f, 1.0f, 1.0f));
-        mushroom.AddComponent(new Rotation(0.0f, 1.0f, 0.0f, 0.0f));
-        mushroom.AddComponent(Texture);
-        mushroom.AddComponent(new Type2D(12));
+        mushroom.Set(new Position(0.0f, 0.0f, 0.0f));
+        mushroom.Set(new Dimension(
+            BaseDimension.Width * ratio.Width,
+            BaseDimension.Height * ratio.Height
+        ));
+        mushroom.Set(new Color(1.0f, 1.0f, 1.0f, 1.0f));
+        mushroom.Set(new Rotation(0.0f, 1.0f, 0.0f, 0.0f));
+        mushroom.Set(new Texture(path));
         Entity = mushroom;
     }
 
-    public void GrowOneStep() 
+    public static bool OnHover(
+        float centerX, float centerY,
+        float width,  float height,   
+        float mouseX, float mouseY,
+        bool yDown = true,
+        float scaleX = 1f, float scaleY = 1f)
     {
-        if(GrowStep > 1) return;
-        Time = 0.0f;
-        if(!FirstGrow){
-            Offset += 1.0f;
-        }
-        ShouldGrow = true;
+        float halfW = 0.5f * width  * scaleX;
+        float halfH = 0.5f * height * scaleY;
+
+        float left   = centerX - halfW;
+        float right  = centerX + halfW;
+
+        // Handle y-down vs y-up screen spaces
+        float top    = yDown ? centerY - halfH : centerY + halfH;
+        float bottom = yDown ? centerY + halfH : centerY - halfH;
+
+        return mouseX >= left && mouseX <= right &&
+            mouseY >= top  && mouseY <= bottom;
     }
 
-    public void Update(float deltaTime, int screenWidth, int screenHeight, Position pos)
-    {        
+    private void UpdateMushroom(float screenWidth, float screenHeight)
+    {
+        Dimension dimension = new Dimension();
+        Position position = new Position();
+
+        // Percent -> pixel scale
+        float sx = screenWidth  / 100.0f;
+        float sy = screenHeight / 100.0f;
+        float visualHeight = 0.0f;
+
+        Entity.Mutate<Dimension>((ref Dimension d) =>
+        {
+            float visualWidth  = (BaseDimension.Width * 0.5f) * sx;
+            visualHeight = (BaseDimension.Height) * sy;
+            d.Width = visualWidth;
+            d.Height = visualHeight;
+            dimension = d;
+        });
+
+        position.X = BasePosition.X * sx;
+        position.Y = BasePosition.Y * sy + visualHeight;
+        position.Z = BasePosition.Z;
+        Entity.Set(position);
+        
+        if (OnHover(
+            position.X,
+            position.Y,
+            dimension.Width,
+            dimension.Height,
+            Pointer.X,
+            Pointer.Y
+        )) 
+        {
+            Entity.Dispose();
+            hasBeenClicked = true;
+        } else 
+        {
+            if (!Pointer.IsDown && hasBeenClicked) {
+                Console.WriteLine("Mushroom clicked!");
+                Entity.Dispose();
+                hasBeenClicked = false;
+            }
+        }
+    }
+
+    public void Update(float deltaTime, int screenWidth, int screenHeight)
+    {   
+        /*
         if(ShouldGrow) {
             if(Time < 1.0f) {
                 Time += deltaTime * 1.0f;
@@ -60,31 +113,7 @@ public class Mushroom
                 GrowStep++;
             }
         }
-
-        // Percent -> pixel scale
-        float sx = screenWidth  / 100.0f;
-        float sy = screenHeight / 100.0f;
-
-        // Visual size in pixels
-        float baseWidth  = Dimension.x;
-        float baseHeight = Dimension.y;
-
-        float visualWidth  = (baseWidth  + BounceValue * 0.5f) * sx;
-        float visualHeight = (baseHeight + BounceValue) * sy;
-
-        var dimension = new Dimension(visualWidth, visualHeight);
-
-        // Anchor in pixels = desired bottom-middle point
-        float anchorX = pos.x * sx;
-        float anchorY = pos.y * sy;
-
-        // If your engine treats Position as the CENTER of the sprite:
-        var position = new Position(
-            anchorX,                      // keep X centered on the anchor
-            anchorY + visualHeight, // move center up by half height
-            pos.z
-        );
-        Entity.Update(dimension);
-        Entity.Update(position);
+        */
+        UpdateMushroom(screenWidth, screenHeight);
     }
 }

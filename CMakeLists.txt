@@ -21,19 +21,6 @@ macro(charp)
                 COMMENT "Publishing, copying, and patching CSharpLibrary.dylib"
         )
 
-        # Declare how to build the output file
-        #add_custom_command(
-        #        OUTPUT ${MY_DYLIB_DESTINATION}
-        #       COMMAND dotnet publish -r osx-arm64 -c Debug
-        #        COMMAND ${CMAKE_COMMAND} -E copy "${MY_DYLIB_SOURCE}" "${MY_DYLIB_DESTINATION}"
-        #        COMMAND install_name_tool -id "@rpath/MyNativeAotLibrary.dylib" "${MY_DYLIB_DESTINATION}"
-        #        WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/MyNativeAotLibrary
-        #        COMMENT "Publishing, copying, and patching MyNativeAotLibrary.dylib"
-        #)
-
-        # Create a target that produces the .dylib file
-        #add_custom_target(publish_native_aot DEPENDS ${MY_DYLIB_DESTINATION})
-
         # Make sure it runs before linking
         add_dependencies(${PROJECT_NAME} publish_native_aot)
 endmacro()
@@ -53,12 +40,54 @@ file(GLOB_RECURSE SOURCES
         ${PROJECT_SOURCE_DIR}/src/*.cpp
 )
 
-# Create the library 
-add_executable(${PROJECT_NAME} #MACOSX_BUNDLE
-        ${SOURCES}
-)
+# IOS
+set(CMAKE_XCODE_GENERATE_SCHEME TRUE)
+set(CMAKE_XCODE_SCHEME_ENABLE_GPU_API_VALIDATION FALSE)
+set(CMAKE_XCODE_SCHEME_ENABLE_GPU_FRAME_CAPTURE_MODE DISABLED)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY BOTH)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE BOTH)
+set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_ALLOWED "YES")
+set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_STYLE "Automatic")
+set(CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM "HC784924PR")
+set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "Apple Development")
+set(CMAKE_XCODE_ATTRIBUTE_TARGETED_DEVICE_FAMILY "1,2")
 
-charp()
+# Assume these are your precompiled SPIR-V files
+set(SHADER_VERT ${CMAKE_BINARY_DIR}/2dshader_vert.spv)
+set(SHADER_FRAG ${CMAKE_BINARY_DIR}/2dshader_frag.spv)
+
+
+if(IOS)
+        add_executable(${PROJECT_NAME} MACOSX_BUNDLE
+                ${PROJECT_SOURCE_DIR}/ios/AppDelegate.h
+                ${PROJECT_SOURCE_DIR}/ios/AppDelegate.mm
+                ${PROJECT_SOURCE_DIR}/ios/SceneDelegate.h
+                ${PROJECT_SOURCE_DIR}/ios/SceneDelegate.mm
+                ${PROJECT_SOURCE_DIR}/ios/ViewController.h
+                ${PROJECT_SOURCE_DIR}/ios/ViewController.mm
+                ${PROJECT_SOURCE_DIR}/ios/main.mm
+        )
+        set(LINK_LIBS
+                Entropy
+                flecs::flecs_static
+                GPUOpen::VulkanMemoryAllocator
+                glm::glm
+                quill
+        )
+else()
+        add_executable(${PROJECT_NAME} #MACOSX_BUNDLE
+                ${SOURCES}
+        )
+        set(LINK_LIBS
+                Entropy
+                flecs::flecs_static
+                GPUOpen::VulkanMemoryAllocator
+                glm::glm
+                quill
+                ${PROJECT_BINARY_DIR}/CSharpLibrary.dylib
+        )
+        charp()
+endif()
 
 target_sources(${PROJECT_NAME} PRIVATE ${APP_ICON})
 
@@ -74,12 +103,43 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
-        Entropy
-        flecs::flecs_static
-        GPUOpen::VulkanMemoryAllocator
-        glm::glm
-        quill
-        ${PROJECT_BINARY_DIR}/CSharpLibrary.dylib
+        ${LINK_LIBS}
 )
+
+target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_BINARY_DIR}/2dshader_vert.spv ${CMAKE_BINARY_DIR}/2dshader_frag.spv)
+
+if(IOS)
+        set_target_properties(${PROJECT_NAME} PROPERTIES
+                MACOSX_BUNDLE_INFO_PLIST ${PROJECT_SOURCE_DIR}/ios/info.plist
+        )
+
+        set_target_properties(${PROJECT_NAME} PROPERTIES
+                BUNDLE_IDENTIFIER se.databeams.svampjakt
+                XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "se.databeams.svampjakt"
+                XCODE_ATTRIBUTE_CODE_SIGNING_ALLOWED "YES"
+                XCODE_ATTRIBUTE_CLANG_ENABLE_MODULES "YES"
+                XCODE_ATTRIBUTE_LD_RUNPATH_SEARCH_PATHS "@executable_path/Frameworks"
+
+                # XCODE_ATTRIBUTE_CODE_SIGN_STYLE "Automatic" # already default value
+                # XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "iPhone Developer"
+                MACOSX_BUNDLE_SHORT_VERSION_STRING 1.0.0
+                MACOSX_BUNDLE_BUNDLE_VERSION 1.0.0
+
+                # XCODE_ATTRIBUTE_DEVELOPMENT_TEAM "XXX"
+                # XCODE_EMBED_FRAMEWORKS "${Vulkan_MoltenVK_LIBRARY};${Vulkan_LIBRARIES};${Vulkan_Layer_VALIDATION}"
+                XCODE_EMBED_FRAMEWORKS_CODE_SIGN_ON_COPY "YES"
+                XCODE_EMBED_FRAMEWORKS_REMOVE_HEADERS_ON_COPY "YES"
+                XCODE_ATTRIBUTE_SKIP_INSTALL NO
+                XCODE_ATTRIBUTE_INSTALL_PATH "$(LOCAL_APPS_DIR)"
+                XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_APPICON_NAME "AppIcon"
+                XCODE_ATTRIBUTE_DEAD_CODE_STRIPPING NO
+        )
+else()
+        # Make the dylib advertise its ID as @rpath/CSharpLibrary.dylib
+        set_target_properties(${PROJECT_NAME} PROPERTIES
+                BUILD_RPATH "@loader_path" # while running from build tree
+                INSTALL_RPATH "@executable_path" # when installed next to the dylib
+        )
+endif()
 
 file(COPY ${CMAKE_SOURCE_DIR}/tmp-project/assets DESTINATION ${CMAKE_BINARY_DIR})

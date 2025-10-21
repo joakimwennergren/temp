@@ -61,3 +61,4 @@
 /Users/joakimwennergren/Projects/Entropy-Application/tmp-project/csharp/obj/Debug/net9.0/osx-arm64/refint/CSharpLibrary.dll
 /Users/joakimwennergren/Projects/Entropy-Application/tmp-project/csharp/obj/Debug/net9.0/osx-arm64/CSharpLibrary.pdb
 /Users/joakimwennergren/Projects/Entropy-Application/tmp-project/csharp/obj/Debug/net9.0/osx-arm64/ref/CSharpLibrary.dll
+/Users/joakimwennergren/Projects/Entropy-Application/tmp-project/csharp/obj/Debug/net9.0/osx-arm64/CSharpLibrary.sourcelink.json

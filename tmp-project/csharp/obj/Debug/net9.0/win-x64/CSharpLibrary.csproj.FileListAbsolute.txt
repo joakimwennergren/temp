@@ -1,0 +1,16 @@
+C:\Temp\temp\tmp-project\csharp\bin\Debug\net9.0\win-x64\CSharpLibrary.deps.json
+C:\Temp\temp\tmp-project\csharp\bin\Debug\net9.0\win-x64\CSharpLibrary.dll
+C:\Temp\temp\tmp-project\csharp\bin\Debug\net9.0\win-x64\CSharpLibrary.pdb
+C:\Temp\temp\tmp-project\csharp\bin\Debug\net9.0\win-x64\CsharpBindings.dll
+C:\Temp\temp\tmp-project\csharp\bin\Debug\net9.0\win-x64\CsharpBindings.pdb
+C:\Temp\temp\tmp-project\csharp\obj\Debug\net9.0\win-x64\CSharpLibrary.csproj.AssemblyReference.cache
+C:\Temp\temp\tmp-project\csharp\obj\Debug\net9.0\win-x64\CSharpLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Temp\temp\tmp-project\csharp\obj\Debug\net9.0\win-x64\CSharpLibrary.AssemblyInfoInputs.cache
+C:\Temp\temp\tmp-project\csharp\obj\Debug\net9.0\win-x64\CSharpLibrary.AssemblyInfo.cs
+C:\Temp\temp\tmp-project\csharp\obj\Debug\net9.0\win-x64\CSharpLibrary.csproj.CoreCompileInputs.cache
+C:\Temp\temp\tmp-project\csharp\obj\Debug\net9.0\win-x64\CSharpLibrary.sourcelink.json
+C:\Temp\temp\tmp-project\csharp\obj\Debug\net9.0\win-x64\CSharpLi.D9646148.Up2Date
+C:\Temp\temp\tmp-project\csharp\obj\Debug\net9.0\win-x64\CSharpLibrary.dll
+C:\Temp\temp\tmp-project\csharp\obj\Debug\net9.0\win-x64\refint\CSharpLibrary.dll
+C:\Temp\temp\tmp-project\csharp\obj\Debug\net9.0\win-x64\CSharpLibrary.pdb
+C:\Temp\temp\tmp-project\csharp\obj\Debug\net9.0\win-x64\ref\CSharpLibrary.dll

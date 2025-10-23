@@ -10,20 +10,36 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 project(EntropyApp VERSION 1.0.0 LANGUAGES CXX)
 
 macro(charp)
-        set(MY_DYLIB_SOURCE "${PROJECT_SOURCE_DIR}/tmp-project/csharp/bin/Debug/net9.0/osx-arm64/native/CSharpLibrary.dylib")
-        set(MY_DYLIB_DESTINATION "${PROJECT_BINARY_DIR}/CSharpLibrary.dylib")
+    # Paths for Windows
+    set(MY_DLL_SOURCE "${PROJECT_SOURCE_DIR}/tmp-project/csharp/bin/Debug/net9.0/win-x64/CSharpLibrary.dll")
+    set(MY_DLL_DESTINATION "${PROJECT_BINARY_DIR}/CSharpLibrary.dll")
 
-        add_custom_target(publish_native_aot ALL
-                COMMAND dotnet publish -r osx-arm64 -c Debug
-                COMMAND ${CMAKE_COMMAND} -E copy "${MY_DYLIB_SOURCE}" "${MY_DYLIB_DESTINATION}"
-                COMMAND install_name_tool -id "@rpath/CSharpLibrary.dylib" "${MY_DYLIB_DESTINATION}"
-                WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/tmp-project/csharp
-                COMMENT "Publishing, copying, and patching CSharpLibrary.dylib"
-        )
+    add_custom_target(publish_native_aot ALL
+            COMMAND dotnet publish -r win-x64 -c Debug
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different "${MY_DLL_SOURCE}" "${MY_DLL_DESTINATION}"
+            WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/tmp-project/csharp
+            COMMENT "Publishing and copying CSharpLibrary.dll"
+    )
 
-        # Make sure it runs before linking
-        add_dependencies(${PROJECT_NAME} publish_native_aot)
+    # Make sure it runs before linking
+    add_dependencies(${PROJECT_NAME} publish_native_aot)
 endmacro()
+
+#macro(charp)
+#        set(MY_DYLIB_SOURCE "${PROJECT_SOURCE_DIR}/tmp-project/csharp/bin/Debug/net9.0/osx-arm64/native/CSharpLibrary.dylib")
+#        set(MY_DYLIB_DESTINATION "${PROJECT_BINARY_DIR}/CSharpLibrary.dylib")
+#
+#        add_custom_target(publish_native_aot ALL
+#                COMMAND dotnet publish -r osx-arm64 -c Debug
+#                COMMAND ${CMAKE_COMMAND} -E copy "${MY_DYLIB_SOURCE}" "${MY_DYLIB_DESTINATION}"
+#                COMMAND install_name_tool -id "@rpath/CSharpLibrary.dylib" "${MY_DYLIB_DESTINATION}"
+#                WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/tmp-project/csharp
+#                COMMENT "Publishing, copying, and patching CSharpLibrary.dylib"
+#        )
+#
+#        # Make sure it runs before linking
+#        add_dependencies(${PROJECT_NAME} publish_native_aot)
+#endmacro()
 
 # Point to your .icns file
 set(APP_ICON ${CMAKE_CURRENT_SOURCE_DIR}/static/icons/icon.icns)
@@ -33,12 +49,20 @@ set_source_files_properties(${APP_ICON} PROPERTIES
         MACOSX_PACKAGE_LOCATION "Resources"
 )
 set(BUILD_ENTROPY_AS_EXECUTABLE OFF CACHE BOOL "" FORCE)
-add_subdirectory(../Entropy-Engine Entropy)
+add_subdirectory(../EntropyEngine Entropy)
 
 # Glob source files
 file(GLOB_RECURSE SOURCES
         ${PROJECT_SOURCE_DIR}/src/*.cpp
 )
+
+if(MSVC)
+    # Example: treat warnings as errors
+    add_compile_options(/W4)
+    
+    # Enable C++ latest standard features (for MSVC 19+)
+    add_compile_options(/std:c++17)
+endif()
 
 # IOS
 set(CMAKE_XCODE_GENERATE_SCHEME TRUE)
@@ -84,7 +108,7 @@ else()
                 GPUOpen::VulkanMemoryAllocator
                 glm::glm
                 quill
-                ${PROJECT_BINARY_DIR}/CSharpLibrary.dylib
+                #${PROJECT_BINARY_DIR}/CSharpLibrary.dll
         )
         charp()
 endif()
@@ -102,7 +126,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
         include
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE
+target_link_libraries(${PROJECT_NAME} PUBLIC
         ${LINK_LIBS}
 )
 

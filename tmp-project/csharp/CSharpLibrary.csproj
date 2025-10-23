@@ -6,6 +6,6 @@
         <PublishAotUsingRuntimePack>true</PublishAotUsingRuntimePack>
     </PropertyGroup>
     <ItemGroup>
-      <ProjectReference Include="/Users/joakimwennergren/Projects/Entropy-Engine/bindings/csharp/CsharpBindings.csproj" />
+      <ProjectReference Include="C:\Temp\EntropyEngine\bindings\csharp\CsharpBindings.csproj" />
     </ItemGroup>
 </Project>

@@ -12,11 +12,9 @@ void UpdateMousePosition(float x, float y);
 
 int main() {
   auto engine = Entropy::EntryPoints::EntropyEngine(1024, 640);
-  //engine.MouseUpdate = UpdateMousePosition;
-  //CSharpMain();
-  engine.Run([](float delta_time, int32_t screen_width,
-                     int32_t screen_height) {
-    //CSharpOnUpdate(delta_time, screen_width, screen_height);
-  });
+  engine.MouseUpdate = UpdateMousePosition;
+  engine.OnUpdate = CSharpOnUpdate;
+  CSharpMain();
+  engine.Run();
   return EXIT_SUCCESS;
 }

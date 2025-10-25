@@ -2,13 +2,13 @@
   "version": 3,
   "targets": {
     "net9.0": {
-      "Microsoft.DotNet.ILCompiler/9.0.9": {
+      "Microsoft.DotNet.ILCompiler/9.0.3": {
         "type": "package",
         "build": {
           "build/Microsoft.DotNet.ILCompiler.props": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.3": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
@@ -25,23 +25,23 @@
         }
       }
     },
-    "net9.0/win-x64": {
-      "Microsoft.DotNet.ILCompiler/9.0.9": {
+    "net9.0/osx-arm64": {
+      "Microsoft.DotNet.ILCompiler/9.0.3": {
         "type": "package",
         "dependencies": {
-          "runtime.win-x64.Microsoft.DotNet.ILCompiler": "9.0.9"
+          "runtime.osx-arm64.Microsoft.DotNet.ILCompiler": "9.0.3"
         },
         "build": {
           "build/Microsoft.DotNet.ILCompiler.props": {}
         }
       },
-      "Microsoft.NET.ILLink.Tasks/9.0.9": {
+      "Microsoft.NET.ILLink.Tasks/9.0.3": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "runtime.win-x64.Microsoft.DotNet.ILCompiler/9.0.9": {
+      "runtime.osx-arm64.Microsoft.DotNet.ILCompiler/9.0.3": {
         "type": "package"
       },
       "CsharpBindings/1.0.0": {
@@ -57,10 +57,10 @@
     }
   },
   "libraries": {
-    "Microsoft.DotNet.ILCompiler/9.0.9": {
-      "sha512": "jbi92xl2xcwGfdD/XSgOtOtQM5Ra3uXsiFuEyLnqwpHXeWHAutabi/LDu9VQbcuCqmvwOhrA3iFcvTIuFFQ0AQ==",
+    "Microsoft.DotNet.ILCompiler/9.0.3": {
+      "sha512": "UqR8lcAIRC5zPk97txAJlsCvDhP9jxV7JSxEMkm3QI384aq/sU0zYiC8kms4ooNtixORgZxbFrDAsYCewR4X2Q==",
       "type": "package",
-      "path": "microsoft.dotnet.ilcompiler/9.0.9",
+      "path": "microsoft.dotnet.ilcompiler/9.0.3",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -79,17 +79,17 @@
         "build/NativeAOT.natvis",
         "build/WindowsAPIs.txt",
         "build/findvcvarsall.bat",
-        "microsoft.dotnet.ilcompiler.9.0.9.nupkg.sha512",
+        "microsoft.dotnet.ilcompiler.9.0.3.nupkg.sha512",
         "microsoft.dotnet.ilcompiler.nuspec",
         "runtime.json",
         "tools/netstandard/ILCompiler.Build.Tasks.deps.json",
         "tools/netstandard/ILCompiler.Build.Tasks.dll"
       ]
     },
-    "Microsoft.NET.ILLink.Tasks/9.0.9": {
-      "sha512": "cHi1os/s6aobEgNkbOh/jW+ru//rHuedvj4PmTh2mMY7et/mJjqphBeXeKCesDvMd0+E2JyX9EPZZC4VRKslXg==",
+    "Microsoft.NET.ILLink.Tasks/9.0.3": {
+      "sha512": "1rqGTfubVg0qj2PsK6esyq3PIxtYJYrN3LsYUV9RrvH3anmt3fT3ozYdAZZH4U8JU/pt5pPIUk8NBSu26wtekA==",
       "type": "package",
-      "path": "microsoft.net.illink.tasks/9.0.9",
+      "path": "microsoft.net.illink.tasks/9.0.3",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -103,7 +103,7 @@
         "build/Microsoft.NET.ILLink.Analyzers.props",
         "build/Microsoft.NET.ILLink.Tasks.props",
         "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.9.0.9.nupkg.sha512",
+        "microsoft.net.illink.tasks.9.0.3.nupkg.sha512",
         "microsoft.net.illink.tasks.nuspec",
         "tools/net472/ILLink.Tasks.dll",
         "tools/net472/ILLink.Tasks.dll.config",
@@ -137,10 +137,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "runtime.win-x64.Microsoft.DotNet.ILCompiler/9.0.9": {
-      "sha512": "pNUVVZBgAw6mG4VQzHxzZmGyKMBD+VLi3kSPCvm8OoOtlIzRnh5bt36wfa5s0iHzFCp3v+ySAyH02Ns9RmNXNA==",
+    "runtime.osx-arm64.Microsoft.DotNet.ILCompiler/9.0.3": {
+      "sha512": "epSxbd8tdx2V8O7V9h4bFqjuo3r7t2FfYkoUP6khwGf0tVIu1BGahx0cEHjnJFrfjl8pOfr/k4KBAf2EhHBeTQ==",
       "type": "package",
-      "path": "runtime.win-x64.microsoft.dotnet.ilcompiler/9.0.9",
+      "path": "runtime.osx-arm64.microsoft.dotnet.ilcompiler/9.0.3",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -230,15 +230,12 @@
         "framework/System.Globalization.Calendars.pdb",
         "framework/System.Globalization.Extensions.dll",
         "framework/System.Globalization.Extensions.pdb",
-        "framework/System.Globalization.Native.pdb",
         "framework/System.Globalization.dll",
         "framework/System.Globalization.pdb",
         "framework/System.IO.Compression.Brotli.dll",
         "framework/System.IO.Compression.Brotli.pdb",
         "framework/System.IO.Compression.FileSystem.dll",
         "framework/System.IO.Compression.FileSystem.pdb",
-        "framework/System.IO.Compression.Native.dll",
-        "framework/System.IO.Compression.Native.pdb",
         "framework/System.IO.Compression.ZipFile.dll",
         "framework/System.IO.Compression.ZipFile.pdb",
         "framework/System.IO.Compression.dll",
@@ -483,10 +480,20 @@
         "framework/System.pdb",
         "framework/WindowsBase.dll",
         "framework/WindowsBase.pdb",
+        "framework/libSystem.Globalization.Native.a",
+        "framework/libSystem.Globalization.Native.dylib",
+        "framework/libSystem.IO.Compression.Native.a",
+        "framework/libSystem.IO.Compression.Native.dylib",
+        "framework/libSystem.Native.a",
+        "framework/libSystem.Native.dylib",
+        "framework/libSystem.Net.Security.Native.a",
+        "framework/libSystem.Net.Security.Native.dylib",
+        "framework/libSystem.Security.Cryptography.Native.Apple.a",
+        "framework/libSystem.Security.Cryptography.Native.Apple.dylib",
+        "framework/libSystem.Security.Cryptography.Native.OpenSsl.a",
+        "framework/libSystem.Security.Cryptography.Native.OpenSsl.dylib",
         "framework/mscorlib.dll",
         "framework/mscorlib.pdb",
-        "framework/msquic.dll",
-        "framework/msquic.pdb",
         "framework/netstandard.dll",
         "framework/netstandard.pdb",
         "mibc/DotNet_Adhoc.mibc",
@@ -495,28 +502,8 @@
         "mibc/DotNet_HelloWorld.mibc",
         "mibc/DotNet_OrchardCore.mibc",
         "mibc/DotNet_TechEmpower.mibc",
-        "runtime.win-x64.microsoft.dotnet.ilcompiler.9.0.9.nupkg.sha512",
-        "runtime.win-x64.microsoft.dotnet.ilcompiler.nuspec",
-        "sdk/Runtime.ServerGC.GuardCF.lib",
-        "sdk/Runtime.ServerGC.GuardCF.pdb",
-        "sdk/Runtime.ServerGC.lib",
-        "sdk/Runtime.ServerGC.pdb",
-        "sdk/Runtime.VxsortDisabled.lib",
-        "sdk/Runtime.VxsortDisabled.pdb",
-        "sdk/Runtime.VxsortEnabled.GuardCF.lib",
-        "sdk/Runtime.VxsortEnabled.GuardCF.pdb",
-        "sdk/Runtime.VxsortEnabled.lib",
-        "sdk/Runtime.VxsortEnabled.pdb",
-        "sdk/Runtime.WorkstationGC.lib",
-        "sdk/Runtime.WorkstationGC.pdb",
-        "sdk/System.Globalization.Native.Aot.GuardCF.lib",
-        "sdk/System.Globalization.Native.Aot.GuardCF.pdb",
-        "sdk/System.Globalization.Native.Aot.lib",
-        "sdk/System.Globalization.Native.Aot.pdb",
-        "sdk/System.IO.Compression.Native.Aot.GuardCF.lib",
-        "sdk/System.IO.Compression.Native.Aot.GuardCF.pdb",
-        "sdk/System.IO.Compression.Native.Aot.lib",
-        "sdk/System.IO.Compression.Native.Aot.pdb",
+        "runtime.osx-arm64.microsoft.dotnet.ilcompiler.9.0.3.nupkg.sha512",
+        "runtime.osx-arm64.microsoft.dotnet.ilcompiler.nuspec",
         "sdk/System.Private.CoreLib.dll",
         "sdk/System.Private.CoreLib.pdb",
         "sdk/System.Private.CoreLib.xml",
@@ -532,84 +519,66 @@
         "sdk/System.Private.TypeLoader.dll",
         "sdk/System.Private.TypeLoader.pdb",
         "sdk/System.Private.TypeLoader.xml",
-        "sdk/bootstrapper.GuardCF.obj",
-        "sdk/bootstrapper.GuardCF.pdb",
-        "sdk/bootstrapper.obj",
-        "sdk/bootstrapper.pdb",
-        "sdk/bootstrapperdll.GuardCF.obj",
-        "sdk/bootstrapperdll.GuardCF.pdb",
-        "sdk/bootstrapperdll.obj",
-        "sdk/bootstrapperdll.pdb",
-        "sdk/dn-containers.pdb",
-        "sdk/eventpipe-disabled.GuardCF.lib",
-        "sdk/eventpipe-disabled.GuardCF.pdb",
-        "sdk/eventpipe-disabled.lib",
-        "sdk/eventpipe-disabled.pdb",
-        "sdk/eventpipe-enabled.GuardCF.lib",
-        "sdk/eventpipe-enabled.GuardCF.pdb",
-        "sdk/eventpipe-enabled.lib",
-        "sdk/eventpipe-enabled.pdb",
-        "sdk/eventpipe-shared-objects.GuardCF.pdb",
-        "sdk/eventpipe-shared-objects.pdb",
-        "sdk/standalonegc-disabled.GuardCF.lib",
-        "sdk/standalonegc-disabled.GuardCF.pdb",
-        "sdk/standalonegc-disabled.lib",
-        "sdk/standalonegc-disabled.pdb",
-        "sdk/standalonegc-enabled.GuardCF.lib",
-        "sdk/standalonegc-enabled.GuardCF.pdb",
-        "sdk/standalonegc-enabled.lib",
-        "sdk/standalonegc-enabled.pdb",
-        "sdk/zlib.pdb",
-        "sdk/zlibstatic.lib",
-        "tools/clrjit_universal_arm64_x64.dll",
-        "tools/clrjit_universal_arm_x64.dll",
-        "tools/clrjit_unix_x64_x64.dll",
-        "tools/clrjit_win_x64_x64.dll",
-        "tools/clrjit_win_x86_x64.dll",
-        "tools/ilc.exe",
-        "tools/jitinterface_x64.dll"
+        "sdk/libRuntime.ServerGC.a",
+        "sdk/libRuntime.WorkstationGC.a",
+        "sdk/libbootstrapper.o",
+        "sdk/libbootstrapperdll.o",
+        "sdk/libeventpipe-disabled.a",
+        "sdk/libeventpipe-enabled.a",
+        "sdk/libstandalonegc-disabled.a",
+        "sdk/libstandalonegc-enabled.a",
+        "sdk/libstdc++compat.a",
+        "sdk/libz.a",
+        "tools/ilc",
+        "tools/libclrjit_universal_arm64_arm64.dylib",
+        "tools/libclrjit_universal_arm_arm64.dylib",
+        "tools/libclrjit_unix_x64_arm64.dylib",
+        "tools/libclrjit_win_x64_arm64.dylib",
+        "tools/libclrjit_win_x86_arm64.dylib",
+        "tools/libjitinterface_arm64.dylib"
       ]
     },
     "CsharpBindings/1.0.0": {
       "type": "project",
-      "path": "../../../EntropyEngine/bindings/csharp/CsharpBindings.csproj",
-      "msbuildProject": "../../../EntropyEngine/bindings/csharp/CsharpBindings.csproj"
+      "path": "../../../Entropy-Engine/bindings/csharp/CsharpBindings.csproj",
+      "msbuildProject": "../../../Entropy-Engine/bindings/csharp/CsharpBindings.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "CsharpBindings >= 1.0.0",
-      "Microsoft.DotNet.ILCompiler >= 9.0.9",
-      "Microsoft.NET.ILLink.Tasks >= 9.0.9"
+      "Microsoft.DotNet.ILCompiler >= 9.0.3",
+      "Microsoft.NET.ILLink.Tasks >= 9.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\qng291\\.nuget\\packages\\": {}
+    "/Users/joakimwennergren/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Temp\\temp\\tmp-project\\csharp\\CSharpLibrary.csproj",
+      "projectUniqueName": "/Users/joakimwennergren/Projects/Entropy-Application/tmp-project/csharp/CSharpLibrary.csproj",
       "projectName": "CSharpLibrary",
-      "projectPath": "C:\\Temp\\temp\\tmp-project\\csharp\\CSharpLibrary.csproj",
-      "packagesPath": "C:\\Users\\qng291\\.nuget\\packages\\",
-      "outputPath": "C:\\Temp\\temp\\tmp-project\\csharp\\obj\\",
+      "projectPath": "/Users/joakimwennergren/Projects/Entropy-Application/tmp-project/csharp/CSharpLibrary.csproj",
+      "packagesPath": "/Users/joakimwennergren/.nuget/packages/",
+      "outputPath": "/Users/joakimwennergren/Projects/Entropy-Application/tmp-project/csharp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\qng291\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/joakimwennergren/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Temp\\EntropyEngine\\bindings\\csharp\\CsharpBindings.csproj": {
-              "projectPath": "C:\\Temp\\EntropyEngine\\bindings\\csharp\\CsharpBindings.csproj"
+            "/Users/joakimwennergren/Projects/Entropy-Engine/bindings/csharp/CsharpBindings.csproj": {
+              "projectPath": "/Users/joakimwennergren/Projects/Entropy-Engine/bindings/csharp/CsharpBindings.csproj"
             }
           }
         }
@@ -624,7 +593,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net9.0": {
@@ -633,13 +602,13 @@
           "Microsoft.DotNet.ILCompiler": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[9.0.9, )",
+            "version": "[9.0.3, )",
             "autoReferenced": true
           },
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[9.0.9, )",
+            "version": "[9.0.3, )",
             "autoReferenced": true
           }
         },
@@ -656,20 +625,16 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[9.0.9, 9.0.9]"
+            "name": "Microsoft.AspNetCore.App.Runtime.osx-arm64",
+            "version": "[9.0.3, 9.0.3]"
           },
           {
-            "name": "Microsoft.NETCore.App.Runtime.NativeAOT.win-x64",
-            "version": "[9.0.9, 9.0.9]"
+            "name": "Microsoft.NETCore.App.Runtime.NativeAOT.osx-arm64",
+            "version": "[9.0.3, 9.0.3]"
           },
           {
-            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[9.0.9, 9.0.9]"
-          },
-          {
-            "name": "runtime.win-x64.Microsoft.DotNet.ILCompiler",
-            "version": "[9.0.9, 9.0.9]"
+            "name": "runtime.osx-arm64.Microsoft.DotNet.ILCompiler",
+            "version": "[9.0.3, 9.0.3]"
           }
         ],
         "frameworkReferences": {
@@ -677,11 +642,11 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
-      "win-x64": {
+      "osx-arm64": {
         "#import": []
       }
     }

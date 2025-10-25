@@ -71,20 +71,22 @@ public class Level1 : BaseLevel
         Name = "Level 1";
         Description = "This is the first level of the game.";
         Difficulty = DifficultyLevel.Easy;
+        /*
         for(int i = 0; i < 5; i++)
         {
             CreateLayer($"assets/sprites/level1_layer{i + 1}.png", (i * 10.0f)); 
             Console.WriteLine($"Created layer {i + 1} with zIndex  {(i * 10.0f)}");
         }
-        _LeafSystem = new FallingLeavesSystem(seed: 42);
-        _MushroomSpawner = new MushroomSpawner(positions);
+        */
+        //_LeafSystem = new FallingLeavesSystem(seed: 42);
+        //_MushroomSpawner = new MushroomSpawner(positions);
     }
 
     public override void Update(float deltaTime, int screenWidth, int screenHeight)
     {
-        _LeafSystem.Update(deltaTime, screenWidth, screenHeight);
-        _MushroomSpawner.Update(deltaTime, screenWidth, screenHeight);
-        UpdateLayers(screenWidth, screenHeight);
+        //_LeafSystem.Update(deltaTime, screenWidth, screenHeight);
+        //_MushroomSpawner.Update(deltaTime, screenWidth, screenHeight);
+        //UpdateLayers(screenWidth, screenHeight);
 
 
 

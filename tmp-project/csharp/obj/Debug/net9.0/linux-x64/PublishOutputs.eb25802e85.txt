@@ -1,2 +1,0 @@
-/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/bin/Debug/net9.0/linux-x64/publish/CSharpLibrary.so
-/home/joakim-wennergren/Desktop/Entropy/Entropy-Editor/tmp-project/csharp/bin/Debug/net9.0/linux-x64/publish/CsharpBindings.pdb

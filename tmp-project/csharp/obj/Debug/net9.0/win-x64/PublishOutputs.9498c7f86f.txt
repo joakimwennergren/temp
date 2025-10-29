@@ -1,2 +1,0 @@
-C:\Temp\temp\tmp-project\csharp\bin\Debug\net9.0\win-x64\publish\CSharpLibrary.dll
-C:\Temp\temp\tmp-project\csharp\bin\Debug\net9.0\win-x64\publish\CsharpBindings.pdb

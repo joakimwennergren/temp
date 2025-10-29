@@ -1,4 +1,5 @@
 using System;
+using Entropy;
 using Entropy.ECS;
 using Entropy.ECS.Components;
 

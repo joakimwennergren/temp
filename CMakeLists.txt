@@ -108,9 +108,9 @@ else()
                 GPUOpen::VulkanMemoryAllocator
                 glm::glm
                 quill
-                ${PROJECT_BINARY_DIR}/CSharpLibrary.dylib
+                #${PROJECT_BINARY_DIR}/CSharpLibrary.dylib
         )
-        charp()
+        #charp()
 endif()
 
 target_sources(${PROJECT_NAME} PRIVATE ${APP_ICON})

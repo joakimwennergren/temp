@@ -2,26 +2,30 @@ using System;
 using Entropy.ECS;
 using Entropy.ECS.Components;
 using System.Runtime.InteropServices;
+using System.Runtime.CompilerServices;
 using Entropy.Physics.TwoD;
 using Svampjakt;
 using Entropy;
 using System.Collections.Generic;
+using System.Reflection;
+using System.Linq;
 
-public static class Pointer {
-  public static float X { get; set; }
-  public static float Y { get; set; }
-  public static bool IsDown { get; set; }
-}
-
-public class Game
+public class Game : EntropyScript
 {
+
+    [UnmanagedCallersOnly(EntryPoint = "CSharpStart")]
+    public static void Start()
+    {
+    }
+
+ /*
   private static Level1 level1;
   private static List<Tuple<DynamicBody, Entity>> boxes = new List<Tuple<DynamicBody, Entity>>();
-  //static private Entity leaf;
 
   [UnmanagedCallersOnly(EntryPoint = "CSharpMain")]
   public static void Main()
   {
+      Entropy.Pointer.Install();
       Renderer.EnablePhysicsDebugging(false);
       Random rand = new Random();
 
@@ -55,22 +59,10 @@ public class Game
       level1 = new Level1();
   }
 
-  [UnmanagedCallersOnly(EntryPoint = "UpdateMousePosition")]
-  public static void UpdateMousePosition(float x, float y)
-  {
-    Pointer.X = x;
-    Pointer.Y = y;
-  }
-
-  [UnmanagedCallersOnly(EntryPoint = "UpdateMouseButton")]
-  public static void UpdateMouseButton(float x, float y)
-  {
-  
-  }
-
   [UnmanagedCallersOnly(EntryPoint = "CSharpOnUpdate")]
   public static void OnUpdate(float deltaTime, int screenWidth, int screenHeight)
   {
+    Console.WriteLine($"Mouse Position: {Pointer.X}, {Pointer.Y}");
     foreach (var box in boxes) {
         var position = box.Item1.GetPosition();
         var rotation = box.Item1.GetRotation();
@@ -79,4 +71,5 @@ public class Game
     }
     level1.Update(deltaTime, screenWidth, screenHeight);
   } 
+  */
 }

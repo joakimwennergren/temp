@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.28.1)
+cmake_minimum_required(VERSION 4.0.0)
 include(FetchContent)
 
 set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
@@ -104,16 +104,16 @@ else()
         )
         set(LINK_LIBS
                 Entropy
-                flecs::flecs_static
-                GPUOpen::VulkanMemoryAllocator
-                glm::glm
-                quill
+                #flecs::flecs_static
+                #GPUOpen::VulkanMemoryAllocator
+                #glm::glm
+                #quill
                 #${PROJECT_BINARY_DIR}/CSharpLibrary.dylib
         )
         #charp()
 endif()
 
-target_sources(${PROJECT_NAME} PRIVATE ${APP_ICON})
+#target_sources(${PROJECT_NAME} PRIVATE ${APP_ICON})
 
 # Set the bundle icon property so Info.plist references it
 #set_target_properties(${PROJECT_NAME} PROPERTIES
@@ -166,4 +166,4 @@ else()
         )
 endif()
 
-file(COPY ${CMAKE_SOURCE_DIR}/tmp-project/assets DESTINATION ${CMAKE_BINARY_DIR})
+#file(COPY ${CMAKE_SOURCE_DIR}/tmp-project/assets DESTINATION ${CMAKE_BINARY_DIR})

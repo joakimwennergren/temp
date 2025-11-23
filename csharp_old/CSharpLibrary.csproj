@@ -8,4 +8,9 @@
     <ItemGroup>
       <ProjectReference Include="/Users/joakimwennergren/Projects/Entropy-Engine/bindings/csharp/CsharpBindings.csproj" />
     </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Flecs.NET.Bindings.Debug" Version="4.0.3" />
+      <PackageReference Include="Flecs.NET.Debug" Version="4.0.3" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.11" />
+    </ItemGroup>
 </Project>

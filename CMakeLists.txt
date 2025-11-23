@@ -80,7 +80,6 @@ set(CMAKE_XCODE_ATTRIBUTE_TARGETED_DEVICE_FAMILY "1,2")
 set(SHADER_VERT ${CMAKE_BINARY_DIR}/2dshader_vert.spv)
 set(SHADER_FRAG ${CMAKE_BINARY_DIR}/2dshader_frag.spv)
 
-
 if(IOS)
         add_executable(${PROJECT_NAME} MACOSX_BUNDLE
                 ${PROJECT_SOURCE_DIR}/ios/AppDelegate.h
@@ -108,7 +107,7 @@ else()
                 #GPUOpen::VulkanMemoryAllocator
                 #glm::glm
                 #quill
-                #${PROJECT_BINARY_DIR}/CSharpLibrary.dylib
+                ${PROJECT_BINARY_DIR}/CSharpLibrary.dylib
         )
         #charp()
 endif()
@@ -121,6 +120,11 @@ endif()
 #   MACOSX_BUNDLE_ICON_FILE "icon.icns"  # name only, not a path
 #)
 
+set_target_properties(${PROJECT_NAME} PROPERTIES
+        BUILD_RPATH "@executable_path"
+        INSTALL_RPATH "@executable_path"
+)
+
 target_include_directories(${PROJECT_NAME} PRIVATE
         ${ENTROPY_INCLUDE_DIRS}
         include
@@ -128,6 +132,16 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
         ${LINK_LIBS}
+)
+
+
+add_custom_command(
+        TARGET ${PROJECT_NAME}
+        POST_BUILD
+        COMMAND ${CMAKE_SOURCE_DIR}/scripts/publish-native-aot.sh --project-source-dir ${CMAKE_SOURCE_DIR}/csharp_old --platform macos-arm64 --dll-name CSharpLibrary.dylib
+        COMMAND install_name_tool -id "@rpath/CSharpLibrary.dylib" ${CMAKE_BINARY_DIR}/CSharpLibrary.dylib
+        COMMAND install_name_tool -change "bin/Debug/net9.0/osx-arm64/native/CSharpLibrary.dylib" "@rpath/CSharpLibrary.dylib" ${CMAKE_BINARY_DIR}/EntropyApp
+        VERBATIM
 )
 
 target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_BINARY_DIR}/2dshader_vert.spv ${CMAKE_BINARY_DIR}/2dshader_frag.spv)
@@ -166,4 +180,4 @@ else()
         )
 endif()
 
-#file(COPY ${CMAKE_SOURCE_DIR}/tmp-project/assets DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ${CMAKE_SOURCE_DIR}/assets DESTINATION ${CMAKE_BINARY_DIR})

@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <PublishAot>true</PublishAot>
         <IsAotCompatible>true</IsAotCompatible>
         <PublishAotUsingRuntimePack>true</PublishAotUsingRuntimePack>
     </PropertyGroup>
     <ItemGroup>
-      <ProjectReference Include="/Users/joakimwennergren/Projects/Entropy-Engine/bindings/csharp/CsharpBindings.csproj" />
+      <ProjectReference Include="/Users/joakimwennergren/Projects/EntropyEngine/bindings/csharp/CsharpBindings.csproj" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Flecs.NET.Bindings.Debug" Version="4.0.3" />

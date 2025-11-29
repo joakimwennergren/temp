@@ -17,20 +17,18 @@ public class MovementController(WorldContainer world) : IController
              .Each((ref Position p) =>
              {
                  float dt = world.DeltaTime();
-                 Console.WriteLine($"Delta Time: {dt}");
                  p.X += 50.0f * dt;
-
-                 Renderer.Draw(new Sprite(
-                     new Position(p.X, 300.0f, 1.0f),
-                     new Dimension(150, 200),
-                     new Color(1, 1, 1, 1),
-                     texture
-                 ));
              });
     }
 
     public void Update()
     {
-        Renderer.Draw(new Quad(new Position(300, 300.0f, 1.0f), new Dimension(400, 400), new Color(1, 1, 1, 1)));
+        Renderer.Draw(new Sprite(
+            new Position(300.0f, 300.0f, 1.1f),
+            new Dimension(150, 200),
+            new Color(1, 1, 1, 1),
+            texture
+        ));
+        Renderer.Draw(new Cube(new Position(0.0f, 0.0f, 0.0f), new Dimension(400, 400), new Color(1, 1, 0, 1.0f)));
     }
 }

@@ -1,0 +1,3 @@
+/Users/joakimwennergren/Projects/temp/csharp_old/bin/Debug/net10.0/osx-arm64/publish/CSharpLibrary.dylib
+/Users/joakimwennergren/Projects/temp/csharp_old/bin/Debug/net10.0/osx-arm64/publish/libflecs.dylib
+/Users/joakimwennergren/Projects/temp/csharp_old/bin/Debug/net10.0/osx-arm64/publish/CsharpBindings.pdb

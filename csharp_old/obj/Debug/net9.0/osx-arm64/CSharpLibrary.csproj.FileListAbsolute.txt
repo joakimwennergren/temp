@@ -14,3 +14,12 @@
 /Users/joakimwennergren/Projects/Entropy-Application/csharp_old/obj/Debug/net9.0/osx-arm64/refint/CSharpLibrary.dll
 /Users/joakimwennergren/Projects/Entropy-Application/csharp_old/obj/Debug/net9.0/osx-arm64/CSharpLibrary.pdb
 /Users/joakimwennergren/Projects/Entropy-Application/csharp_old/obj/Debug/net9.0/osx-arm64/ref/CSharpLibrary.dll
+/Users/joakimwennergren/Projects/temp/csharp_old/obj/Debug/net9.0/osx-arm64/CSharpLibrary.csproj.AssemblyReference.cache
+/Users/joakimwennergren/Projects/temp/csharp_old/obj/Debug/net9.0/osx-arm64/CSharpLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/joakimwennergren/Projects/temp/csharp_old/obj/Debug/net9.0/osx-arm64/CSharpLibrary.AssemblyInfoInputs.cache
+/Users/joakimwennergren/Projects/temp/csharp_old/obj/Debug/net9.0/osx-arm64/CSharpLibrary.AssemblyInfo.cs
+/Users/joakimwennergren/Projects/temp/csharp_old/obj/Debug/net9.0/osx-arm64/CSharpLibrary.csproj.CoreCompileInputs.cache
+/Users/joakimwennergren/Projects/temp/csharp_old/obj/Debug/net9.0/osx-arm64/CSharpLibrary.sourcelink.json
+/Users/joakimwennergren/Projects/temp/csharp_old/obj/Debug/net9.0/osx-arm64/CSharpLibrary.dll
+/Users/joakimwennergren/Projects/temp/csharp_old/obj/Debug/net9.0/osx-arm64/refint/CSharpLibrary.dll
+/Users/joakimwennergren/Projects/temp/csharp_old/obj/Debug/net9.0/osx-arm64/CSharpLibrary.pdb

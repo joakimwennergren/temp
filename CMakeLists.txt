@@ -49,7 +49,7 @@ set_source_files_properties(${APP_ICON} PROPERTIES
         MACOSX_PACKAGE_LOCATION "Resources"
 )
 set(BUILD_ENTROPY_AS_EXECUTABLE OFF CACHE BOOL "" FORCE)
-add_subdirectory(../Entropy-Engine Entropy)
+add_subdirectory(../EntropyEngine Entropy)
 
 # Glob source files
 file(GLOB_RECURSE SOURCES
@@ -77,8 +77,6 @@ set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "Apple Development")
 set(CMAKE_XCODE_ATTRIBUTE_TARGETED_DEVICE_FAMILY "1,2")
 
 # Assume these are your precompiled SPIR-V files
-set(SHADER_VERT ${CMAKE_BINARY_DIR}/2dshader_vert.spv)
-set(SHADER_FRAG ${CMAKE_BINARY_DIR}/2dshader_frag.spv)
 
 if(IOS)
         add_executable(${PROJECT_NAME} MACOSX_BUNDLE
@@ -135,16 +133,23 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
 )
 
 
-add_custom_command(
-        TARGET ${PROJECT_NAME}
-        POST_BUILD
-        COMMAND ${CMAKE_SOURCE_DIR}/scripts/publish-native-aot.sh --project-source-dir ${CMAKE_SOURCE_DIR}/csharp_old --platform macos-arm64 --dll-name CSharpLibrary.dylib
-        COMMAND install_name_tool -id "@rpath/CSharpLibrary.dylib" ${CMAKE_BINARY_DIR}/CSharpLibrary.dylib
-        COMMAND install_name_tool -change "bin/Debug/net9.0/osx-arm64/native/CSharpLibrary.dylib" "@rpath/CSharpLibrary.dylib" ${CMAKE_BINARY_DIR}/EntropyApp
-        VERBATIM
+add_custom_target(publish_native_aot ALL
+    COMMAND ${CMAKE_SOURCE_DIR}/scripts/publish-native-aot.sh
+            --project-source-dir ${CMAKE_SOURCE_DIR}/csharp_old
+            --platform macos-arm64
+            --dll-name CSharpLibrary.dylib
+    COMMAND ${CMAKE_COMMAND} -E echo "Patching install names..."
+    COMMAND install_name_tool -id "@rpath/CSharpLibrary.dylib" "${CMAKE_BINARY_DIR}/CSharpLibrary.dylib"
+    COMMAND install_name_tool -change "bin/Debug/net9.0/osx-arm64/native/CSharpLibrary.dylib" "@rpath/CSharpLibrary.dylib" "${CMAKE_BINARY_DIR}/EntropyApp"
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+    COMMENT "Publishing native AOT and fixing CSharpLibrary.dylib install names"
+    VERBATIM
 )
 
-target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_BINARY_DIR}/2dshader_vert.spv ${CMAKE_BINARY_DIR}/2dshader_frag.spv)
+add_dependencies(${PROJECT_NAME} publish_native_aot)
+
+
+#target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_BINARY_DIR}/2dshader_vert.spv ${CMAKE_BINARY_DIR}/2dshader_frag.spv)
 
 if(IOS)
         set_target_properties(${PROJECT_NAME} PROPERTIES

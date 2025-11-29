@@ -35,7 +35,7 @@ CONFIG="Debug"
 PROJECT_SOURCE_DIR="$(pwd)"
 PROJECT_BINARY_DIR="$(pwd)"
 DLL_NAME="CSharpLibrary.dll"
-FRAMEWORK="net9.0"
+FRAMEWORK="net10.0"
 SELF_CONTAINED="false"
 FORCE_OUTPUT_DIR=""
 
@@ -121,12 +121,8 @@ echo "Running: ${DOTNET_CMD[*]}"
 
 popd >/dev/null
 
-#if [[ ! -f "$MY_DLL_SOURCE" ]]; then
-#  echo "Error: DLL not found: $MY_DLL_SOURCE"
-#  exit 4
-#fi
-
+# Copy the published files to the build dir
 mkdir -p "$(dirname "$MY_DLL_DESTINATION")"
-cp -r "$PUBLISH_OUTPUT/publish/"* "$PROJECT_BINARY_DIR"
+cp -r "$PUBLISH_OUTPUT/publish/"* "$PROJECT_BINARY_DIR/build"
 
 echo "Done."

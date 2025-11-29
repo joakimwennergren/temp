@@ -1,2 +1,4 @@
+.cache
 build
-csharp_old/bin
+scripts/bin
+scripts/obj

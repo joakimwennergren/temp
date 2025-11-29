@@ -1,1 +1,0 @@
-public interface IController { void Setup(); void Update(); }

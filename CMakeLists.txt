@@ -76,8 +76,6 @@ set(CMAKE_XCODE_ATTRIBUTE_DEVELOPMENT_TEAM "HC784924PR")
 set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "Apple Development")
 set(CMAKE_XCODE_ATTRIBUTE_TARGETED_DEVICE_FAMILY "1,2")
 
-# Assume these are your precompiled SPIR-V files
-
 if(IOS)
         add_executable(${PROJECT_NAME} MACOSX_BUNDLE
                 ${PROJECT_SOURCE_DIR}/ios/AppDelegate.h
@@ -128,25 +126,37 @@ target_include_directories(${PROJECT_NAME} PRIVATE
         include
 )
 
-target_link_libraries(${PROJECT_NAME} PUBLIC
-        ${LINK_LIBS}
-)
+# Glob C# source files for dependency tracking
+file(GLOB_RECURSE CSHARP_SOURCES "${CMAKE_SOURCE_DIR}/scripts/src/*.cs")
+list(APPEND CSHARP_SOURCES "${CMAKE_SOURCE_DIR}/scripts/CSharpLibrary.csproj")
 
-
-add_custom_target(publish_native_aot ALL
-    COMMAND ${CMAKE_SOURCE_DIR}/scripts/publish-native-aot.sh
-            --project-source-dir ${CMAKE_SOURCE_DIR}/csharp_old
+add_custom_command(
+    OUTPUT "${CMAKE_BINARY_DIR}/CSharpLibrary.dylib"
+    COMMAND ${CMAKE_SOURCE_DIR}/publish-native-aot.sh
+            --project-source-dir ${CMAKE_SOURCE_DIR}/scripts
             --platform macos-arm64
             --dll-name CSharpLibrary.dylib
     COMMAND ${CMAKE_COMMAND} -E echo "Patching install names..."
     COMMAND install_name_tool -id "@rpath/CSharpLibrary.dylib" "${CMAKE_BINARY_DIR}/CSharpLibrary.dylib"
-    COMMAND install_name_tool -change "bin/Debug/net9.0/osx-arm64/native/CSharpLibrary.dylib" "@rpath/CSharpLibrary.dylib" "${CMAKE_BINARY_DIR}/EntropyApp"
+    DEPENDS ${CSHARP_SOURCES}
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-    COMMENT "Publishing native AOT and fixing CSharpLibrary.dylib install names"
+    COMMENT "Publishing native AOT C# library"
     VERBATIM
 )
 
+add_custom_target(publish_native_aot DEPENDS "${CMAKE_BINARY_DIR}/CSharpLibrary.dylib")
+
+target_link_libraries(${PROJECT_NAME} PUBLIC
+        ${LINK_LIBS}
+)
+
 add_dependencies(${PROJECT_NAME} publish_native_aot)
+
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND install_name_tool -change "bin/Debug/net9.0/osx-arm64/native/CSharpLibrary.dylib" "@rpath/CSharpLibrary.dylib" "${CMAKE_BINARY_DIR}/EntropyApp"
+    COMMENT "Fixing EntropyApp install names"
+    VERBATIM
+)
 
 
 #target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_BINARY_DIR}/2dshader_vert.spv ${CMAKE_BINARY_DIR}/2dshader_frag.spv)

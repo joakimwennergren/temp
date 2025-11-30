@@ -30,7 +30,18 @@ public class MovementController(WorldContainer world) : IController
             new Color(1, 1, 1, 1),
             texture
         ));
-        */
-        Renderer.Draw(new Cube(new Position(0.0f, 0.0f, 0.0f), new Dimension(400, 400), new Color(1, 1, 0, 1.0f)));
+        */  
+        for(var x = 0; x < 5; x++)
+        {
+            for(var y = 0; y < 5; y++)
+            {
+                Renderer.Draw(new Cube(
+                    new Position(100 + x * 55, 0.0f, 100 + y * 55),
+                    new Dimension(50, 50, 50),
+                    new Color(1.0f, 0.8f, 1.0f, 0.2f)
+                ));
+            }
+        }
+
     }
 }
